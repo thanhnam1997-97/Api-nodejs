@@ -1,6 +1,16 @@
-const user = require('../controller/userController');
-const routes = require('express').Router()
+import * as controllers from '../controller/userController'
+import express from 'express'
+import verifyToken from '../middlewares/verify_token'
+import { isAdmin, isModeratorOrAdmin } from '../middlewares/verify_role'
 
-routes.get('/', user.getUsers)
+const routes = express.Router()
+
+// Public Routes
+
+
+// Private Routes
+routes.use(verifyToken)
+routes.use(isAdmin)
+routes.get('/', controllers.geCurrent)
 
 module.exports = routes

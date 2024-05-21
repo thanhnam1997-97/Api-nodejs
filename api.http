@@ -15,7 +15,11 @@ POST http://localhost:5000/api/v1/auth/login
 Content-Type: application/json
 
 {
-    "email": "hothanhnam@gmail.com",
+    "email": "thanhnam7@gmail.com",
     "password": "nam1234"
 }
 
+
+###
+GET http://localhost:5000/api/v1/user/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aGFuaG5hbTdAZ21haWwuY29tIiwicm9sZV9jb2RlIjoicjIiLCJpYXQiOjE3MTYyODcxMTksImV4cCI6MTcxNjcxOTExOX0.mFikrIn-CNtu05hXfoUVcsxww05NYe51gS0whtFs6fM
